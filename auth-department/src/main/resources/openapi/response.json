@@ -1,0 +1,11 @@
+{
+  "userCreatedOrAuthenticatedResponse": {
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20iLCJpYXQiOjE2Nzk4NDk3NzAsImV4cCI6MTY3OTg1MTIxMH0.R5F7rHlBY29989gscsuZ1fRud8C2XErQrTZhABZsgUE"
+  },
+  "emailTakenResponse": {
+    "reason": "Email is already in use."
+  },
+  "notAcceptableResponse": {
+    "reason": "All fields should be filled."
+  }
+}

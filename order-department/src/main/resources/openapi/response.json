@@ -1,0 +1,5 @@
+{
+  "badRequestResponse":{
+    "responseMessage": "Bad request. Query rejected."
+  }
+}

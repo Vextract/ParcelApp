@@ -1,0 +1,8 @@
+{
+  "okayResponse": {
+  "id": 3,
+  "fullname": "John Doe",
+  "courierStatus": "AVAILABLE",
+  "ordersCount": 0
+    }
+}

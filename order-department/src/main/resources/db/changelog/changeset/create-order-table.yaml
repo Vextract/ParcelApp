@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-order
+      author: Mikhail
+      changes:
+        - createTable:
+            tableName: orders
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: order_status
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: destination
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date_to_be_delivered
+                  type: DATE
+                  constraints:
+                    nullable: true
+              - column:
+                  name: assigned_courier
+                  type: bigint
+                  constraints:
+                    nullable: true
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false

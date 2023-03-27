@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-courier
+      author: Mikhail
+      changes:
+        - createTable:
+            tableName: couriers
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: fullname
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: orders_count
+                  type: bigint
+                  constraints:
+                    nullable: false

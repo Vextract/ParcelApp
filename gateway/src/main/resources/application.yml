@@ -1,0 +1,37 @@
+server:
+    port: 4000
+
+eureka:
+    client:
+        fetch-registry: true
+        register-with-eureka: true
+        service-url:
+            defaultZone: http://localhost:8761/eureka/
+    instance:
+        hostname: localhost
+        preferIpAddress: true
+
+spring:
+    application:
+        name: GATEWAY
+    cloud:
+        gateway:
+            default-filters:
+            - name: MyFilter
+            routes:
+            - id: AUTH-DEPARTMENT
+              uri: lb://AUTH-DEPARTMENT
+              predicates:
+                - Path=/api/auth/**
+            - id: COURIER-DEPARTMENT
+              uri: lb://COURIER-DEPARTMENT
+              predicates:
+                - Path=/api/deliverers/**
+            - id: ORDER-DEPARTMENT
+              uri: lb://ORDER-DEPARTMENT
+              predicates:
+                - Path=/api/order/**
+            - id: TRACKING-DEPARTMENT
+              uri: lb://TRACKING-DEPARTMENT
+              predicates:
+                - Path=/api/tracking/**
